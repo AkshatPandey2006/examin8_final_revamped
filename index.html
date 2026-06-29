@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Examin8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
+    <meta name="keywords" content="Examin8, Online Exams, Test Generator, Paper creator, Teach Online, Question Paper Maker, CBSE Paper Generator, JEE Exam Creator, NEET Online Mock Tests, Question Paper Creator, School Exam Papers, CBSE Board Exam Papers, Coaching Institutes">
+    <meta name="description" content="Create and Conduct Exams Online in Minutes with Examin8 Test Generator. Assign online tests, share videos, upload study material and share with your students using Free Mobile App for Schools and Coaching Institutes.">
+
+    <title>Examin8 - Question Paper Creator</title>
+
+    <link rel="icon" type="image/png" href="images/examin8_logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style type="text/tailwindcss">
+        @theme {
+          --font-sans: "Geist", sans-serif;
+          --font-mono: "Geist Mono", monospace;
+        }
+        @custom-variant dark (&:where(.dark, .dark *));
+    </style>
+
+    <style type="text/tailwindcss">
+        @layer base {
+            html { overscroll-behavior-y: none; }
+            body {
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+        }
+        
+        /* Mobile menu smooth fade */
+        #mobile-menu {
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        .menu-hidden {
+            opacity: 0;
+            transform: translateY(-10px);
+            pointer-events: none;
+        }
+        .menu-visible {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+
+        /* Prevent page scroll when sliding on mobile */
+        .custom-range-slider {
+            touch-action: none;
+        }
+    </style>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7J82TFM489"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-7J82TFM489');
+    gtag('config', 'UA-1442827-12');
+    </script>
+
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "ejbzgerd1q");
+    </script>
+
+    <script>
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+
+</head>
+<body class="antialiased font-sans bg-[#f5f7fb] text-slate-700 dark:bg-[#0f172a] dark:text-gray-100">
+
+    <header class="fixed top-0 z-50 w-full transition-colors duration-500 font-sans border-b backdrop-blur-xl backdrop-saturate-150 bg-[#f5f7fb]/80 border-slate-200/80 shadow-sm dark:bg-[#0f172a]/80 dark:border-white/[0.08] dark:shadow-[0_4px_30px_rgba(0,0,0,0.1)]">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-[auto_1fr_auto] h-20 items-center gap-8">
+            
+            <div class="flex items-center gap-10">
+                <a href="/" class="flex items-center gap-3 font-semibold tracking-tight transition-colors duration-500 text-slate-900 dark:text-white">
+                    <img src="images/examin8_logo.png" alt="Examin8 Logo" class="w-8 h-8 object-contain" />
+                    <span class="text-xl">Examin8</span>
+                </a>
+
+                <nav class="hidden md:flex gap-8">
+                    <a href="https://app.examin8.com/purchase-subscription" target="_blank" class="text-sm font-medium transition-colors duration-300 text-slate-600 hover:text-slate-900 dark:text-white/60 dark:hover:text-white">Pricing</a>
+                    <a href="https://docs.examin8.com" target="_blank" class="text-sm font-medium transition-colors duration-300 text-slate-600 hover:text-slate-900 dark:text-white/60 dark:hover:text-white">Tutorials</a>
+                    <a href="#personal-app" class="text-sm font-medium transition-colors duration-300 text-amber-600 hover:text-amber-700 dark:text-[#d4af37]/80 dark:hover:text-[#d4af37]">Custom App</a>
+                </nav>
+            </div>
+            
+            <div></div>
+            
+            <div class="hidden md:flex items-center gap-4">
+                <button type="button" class="theme-toggle touch-manipulation flex items-center justify-center p-2.5 rounded-full border bg-slate-50 transition-all duration-300 hover:scale-105 active:scale-95 border-slate-200 text-slate-600 hover:text-slate-900 hover:bg-slate-100 dark:bg-[#1e293b] dark:border-slate-700 dark:text-white/80 dark:hover:text-white dark:hover:bg-slate-800">
+                    <svg class="w-4 h-4 hidden dark:block pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+                    <svg class="w-4 h-4 block dark:hidden pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+                </button>
+
+                <a href="https://app.examin8.com/home" target="_blank" class="inline-flex items-center justify-center gap-2 h-11 px-6 rounded-full text-sm font-medium bg-[#4780ff] hover:bg-[#4780ff]/90 text-white transition-all duration-300 shadow-[0_0_20px_rgba(71,128,255,0.2)] hover:shadow-[0_0_30px_rgba(71,128,255,0.4)] group">
+                    Get Started
+                    <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform ease-in-out duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
+            </div>
+            
+            <div class="flex items-center gap-2 md:hidden">
+                <button type="button" class="theme-toggle touch-manipulation flex items-center justify-center p-2.5 rounded-full border bg-slate-50 border-slate-200 text-slate-600 dark:bg-[#1e293b] dark:border-slate-700 dark:text-white/80 transition-all duration-300">
+                    <svg class="w-4 h-4 hidden dark:block pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+                    <svg class="w-4 h-4 block dark:hidden pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+                </button>
+
+                <button type="button" id="mobile-menu-btn" class="touch-manipulation inline-flex items-center justify-center p-2 rounded-full transition-colors text-slate-900 hover:bg-slate-100 dark:text-white dark:hover:bg-slate-800">
+                    <svg id="icon-menu" class="w-6 h-6 block pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+                    <svg id="icon-close" class="w-6 h-6 hidden pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="md:hidden absolute top-20 inset-x-0 backdrop-blur-xl backdrop-saturate-150 border-b p-6 bg-[#f5f7fb]/95 border-slate-200/80 dark:bg-[#0f172a]/95 dark:border-white/[0.08] menu-hidden shadow-xl z-50">
+            <div class="flex flex-col gap-6">
+                <a href="https://app.examin8.com/purchase-subscription" class="text-base font-medium text-slate-700 dark:text-white/70">Pricing</a>
+                <a href="https://docs.examin8.com" class="text-base font-medium text-slate-700 dark:text-white/70">Tutorials</a>
+                <hr class="border-t border-slate-200 dark:border-white/10" />
+                <a href="#personal-app" class="flex items-center gap-2 text-base font-medium transition-colors text-amber-700/80 hover:text-amber-700 dark:text-[#d4af37]/80 dark:hover:text-[#d4af37]">
+                    Custom App
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-1">
+        
+<section class="relative w-full min-h-screen flex flex-col overflow-hidden font-sans transition-colors duration-500 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] dark:bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:24px_24px]">
+    
+    <div class="flex-grow flex items-center max-w-[90rem] mx-auto px-6 md:px-10 w-full py-16">
+        <div class="grid lg:grid-cols-[1fr_1.4fr] gap-12 lg:gap-20 items-center">
+            
+            <div class="text-left w-full pt-16">
+                <span class="mb-6 inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-medium tracking-wide border border-slate-200 bg-white text-slate-700 shadow-sm dark:border-slate-700 dark:bg-[#1e293b] dark:text-white/80">
+                    <span class="relative flex h-1.5 w-1.5 shrink-0">
+                        <span class="relative inline-flex h-1.5 w-1.5 rounded-full bg-[#4780ff]"></span>
+                    </span>
+                    New Examin8 AI
+                </span>
+                
+                <h1 class="text-5xl md:text-6xl lg:text-5xl font-semibold tracking-tighter mb-8 leading-[1.05] text-slate-900 dark:text-white">
+                    Create Question Papers<br />
+                    <span class="text-[#4780ff]">in minutes</span>
+                </h1>
+                
+                <p class="text-xl mb-10 font-light leading-relaxed text-slate-600 dark:text-white/60 max-w-2xl">
+                    We help schools and educators create question papers and conduct online exams through their own branded mobile app, powered by Examin8.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 mb-12">
+                    <a href="https://app.examin8.com/home" target="_blank" class="inline-flex items-center justify-center gap-2 h-16 px-10 rounded-full text-lg font-medium bg-[#4780ff] hover:bg-[#4780ff]/90 text-white shadow-lg shadow-blue-500/20 transition-all duration-300">
+                        Get Started
+                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=ikpZ-Wjjp3c" target="_blank" class="inline-flex items-center justify-center gap-2 h-16 px-10 rounded-full text-lg font-medium transition-all duration-300 bg-white border border-slate-300 text-slate-900 hover:bg-slate-50 shadow-sm dark:bg-[#1e293b] dark:border-slate-600 dark:text-white dark:hover:bg-slate-800">
+                        Watch demo
+                    </a>
+                </div>
+            </div>
+
+            <div class="relative w-full h-full flex items-center">
+                <div class="w-full rounded-3xl p-3 shadow-2xl bg-white border border-slate-200 dark:bg-[#1e293b] dark:border-slate-700">
+                    <div class="flex items-center gap-2 mb-4 px-3 pt-2">
+                        <div class="w-3 h-3 rounded-full bg-slate-200 dark:bg-slate-600"></div>
+                        <div class="w-3 h-3 rounded-full bg-slate-200 dark:bg-slate-600"></div>
+                        <div class="w-3 h-3 rounded-full bg-slate-200 dark:bg-slate-600"></div>
+                    </div>
+                    <div class="rounded-2xl overflow-hidden bg-black aspect-video shadow-inner">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/ikpZ-Wjjp3c?si=8ofiOPWpbki7Gj31" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="w-full py-12 border-t border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="flex flex-col items-center justify-center space-y-8 text-center">
+                <h3 class="text-[11px] font-semibold tracking-[0.2em] uppercase text-slate-500 dark:text-slate-400">Trusted by the Top Schools of India</h3>
+                <div class="flex flex-wrap items-center justify-center gap-4 md:gap-8 w-full">
+                    
+                    <div class="group relative flex items-center justify-center w-[150px] h-[75px] md:w-[190px] md:h-[95px] rounded-xl cursor-pointer bg-[#fcfdfe] border border-slate-200 transition-all duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-lg dark:bg-slate-200 dark:border-slate-300">
+                        <img src="images/school_logo_1.png" alt="Kendriya Vidyalaya" class="w-[70%] h-[70%] object-contain" />
+                        <span class="pointer-events-none absolute top-full mt-2 left-1/2 -translate-x-1/2 px-4 py-2 rounded-full text-[11px] font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 hidden md:group-hover:block transition-opacity duration-200 z-[9999] shadow-xl bg-white border border-slate-200 text-slate-800 dark:bg-slate-800 dark:border-slate-600 dark:text-white">Kendriya Vidyalaya</span>
+                    </div>
+
+                    <div class="group relative flex items-center justify-center w-[150px] h-[75px] md:w-[190px] md:h-[95px] rounded-xl cursor-pointer bg-[#fcfdfe] border border-slate-200 transition-all duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-lg dark:bg-slate-200 dark:border-slate-300">
+                        <img src="images/school_logo_2.png" alt="Delhi Public School" class="w-[70%] h-[70%] object-contain" />
+                        <span class="pointer-events-none absolute top-full mt-2 left-1/2 -translate-x-1/2 px-4 py-2 rounded-full text-[11px] font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 hidden md:group-hover:block transition-opacity duration-200 z-[9999] shadow-xl bg-white border border-slate-200 text-slate-800 dark:bg-slate-800 dark:border-slate-600 dark:text-white">Delhi Public School</span>
+                    </div>
+
+                    <div class="group relative flex items-center justify-center w-[150px] h-[75px] md:w-[190px] md:h-[95px] rounded-xl cursor-pointer bg-[#fcfdfe] border border-slate-200 transition-all duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-lg dark:bg-slate-200 dark:border-slate-300">
+                        <img src="images/school_logo_3.png" alt="Vidyashram School" class="w-[70%] h-[70%] object-contain" />
+                        <span class="pointer-events-none absolute top-full mt-2 left-1/2 -translate-x-1/2 px-4 py-2 rounded-full text-[11px] font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 hidden md:group-hover:block transition-opacity duration-200 z-[9999] shadow-xl bg-white border border-slate-200 text-slate-800 dark:bg-slate-800 dark:border-slate-600 dark:text-white">Vidyashram School</span>
+                    </div>
+
+                    <div class="group relative flex items-center justify-center w-[150px] h-[75px] md:w-[190px] md:h-[95px] rounded-xl cursor-pointer bg-[#fcfdfe] border border-slate-200 transition-all duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-lg dark:bg-slate-200 dark:border-slate-300">
+                        <img src="images/school_logo_4.webp" alt="Sainik School" class="w-[70%] h-[70%] object-contain" />
+                        <span class="pointer-events-none absolute top-full mt-2 left-1/2 -translate-x-1/2 px-4 py-2 rounded-full text-[11px] font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 hidden md:group-hover:block transition-opacity duration-200 z-[9999] shadow-xl bg-white border border-slate-200 text-slate-800 dark:bg-slate-800 dark:border-slate-600 dark:text-white">Sainik School</span>
+                    </div>
+
+                    <div class="group relative flex items-center justify-center w-[150px] h-[75px] md:w-[190px] md:h-[95px] rounded-xl cursor-pointer bg-[#fcfdfe] border border-slate-200 transition-all duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-lg dark:bg-slate-200 dark:border-slate-300">
+                        <img src="images/school_logo_5.png" alt="St. Xavier High School" class="w-[70%] h-[70%] object-contain" />
+                        <span class="pointer-events-none absolute top-full mt-2 left-1/2 -translate-x-1/2 px-4 py-2 rounded-full text-[11px] font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 hidden md:group-hover:block transition-opacity duration-200 z-[9999] shadow-xl bg-white border border-slate-200 text-slate-800 dark:bg-slate-800 dark:border-slate-600 dark:text-white">St. Xavier High School</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="relative py-16 md:py-24 transition-colors duration-500 bg-[#f5f7fb] dark:bg-[#0f172a]">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+        <div class="flex flex-col items-center text-center space-y-3 mb-16">
+            <span class="inline-flex items-center rounded-full px-4 py-1.5 text-xs font-medium tracking-wide border border-slate-200 bg-white text-slate-700 dark:border-slate-700 dark:bg-[#1e293b] dark:text-slate-300 transition-colors duration-500">How It Works</span>
+            <h2 class="text-3xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white transition-colors duration-500">Create Tests in Just 3 Simple Steps</h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="flex flex-col rounded-2xl border border-slate-200 bg-white shadow-sm overflow-hidden dark:bg-[#1e293b] dark:border-slate-700">
+                <div class="relative w-full aspect-[4/3] bg-slate-100 dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700 overflow-hidden">
+                    <img src="images/web_mockup_1.png" alt="Select Curriculum" class="w-full h-full object-cover object-top dark:brightness-95">
+                    <div class="absolute inset-0 dark:bg-black/10 pointer-events-none"></div>
+                </div>
+                <div class="p-6 md:p-8 flex-1 flex flex-col justify-center">
+                    <span class="text-xs font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400">Step 01</span>
+                    <h3 class="text-xl md:text-2xl font-semibold mt-2 mb-3 text-slate-900 dark:text-white">Select Curriculum</h3>
+                    <p class="text-base text-slate-700 dark:text-slate-300 leading-relaxed">Pick your class and subject. Access our vast question bank for CBSE, NEET, JEE, and competitive exams.</p>
+                </div>
+            </div>
+
+            <div class="flex flex-col rounded-2xl border border-slate-200 bg-white shadow-sm overflow-hidden dark:bg-[#1e293b] dark:border-slate-700">
+                <div class="relative w-full aspect-[4/3] bg-slate-100 dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700 overflow-hidden">
+                    <img src="images/web_mockup_2.png" alt="Pick Questions" class="w-full h-full object-cover object-top dark:brightness-95">
+                    <div class="absolute inset-0 dark:bg-black/10 pointer-events-none"></div>
+                </div>
+                <div class="p-6 md:p-8 flex-1 flex flex-col justify-center">
+                    <span class="text-xs font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400">Step 02</span>
+                    <h3 class="text-xl md:text-2xl font-semibold mt-2 mb-3 text-slate-900 dark:text-white">Pick Questions</h3>
+                    <p class="text-base text-slate-700 dark:text-slate-300 leading-relaxed">Set your blueprint or use our preloaded templates to select questions for your exact requirements.</p>
+                </div>
+            </div>
+
+            <div class="flex flex-col rounded-2xl border border-slate-200 bg-white shadow-sm overflow-hidden dark:bg-[#1e293b] dark:border-slate-700">
+                <div class="relative w-full aspect-[4/3] bg-slate-100 dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700 overflow-hidden">
+                    <img src="images/web_mockup_3.png" alt="Download & Go" class="w-full h-full object-cover object-top dark:brightness-95">
+                    <div class="absolute inset-0 dark:bg-black/10 pointer-events-none"></div>
+                </div>
+                <div class="p-6 md:p-8 flex-1 flex flex-col justify-center">
+                    <span class="text-xs font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400">Step 03</span>
+                    <h3 class="text-xl md:text-2xl font-semibold mt-2 mb-3 text-slate-900 dark:text-white">Download & Go</h3>
+                    <p class="text-base text-slate-700 dark:text-slate-300 leading-relaxed">Preview your custom test, make final tweaks, and export your paper instantly as a professional PDF.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <section id="features" class="relative w-full py-16 md:py-24 border-t overflow-hidden transition-colors duration-500 bg-[radial-gradient(#f1f5f9_2px,transparent_2px)] dark:bg-[radial-gradient(#1e293b_2px,transparent_2px)] [background-size:24px_24px] border-slate-200 dark:border-slate-800">
+            <div class="px-6 md:px-12 mx-auto max-w-7xl relative z-10">
+                <div class="flex flex-col items-center justify-center space-y-3 text-center mb-16">
+                    <span class="inline-flex items-center rounded-full px-4 py-1.5 text-xs font-medium tracking-wide border border-slate-200 bg-white text-slate-700 shadow-sm dark:border-slate-700 dark:bg-[#1e293b] dark:text-white/80 transition-colors duration-500">Features</span>
+                    <h2 class="text-3xl md:text-5xl font-semibold tracking-tighter text-slate-900 dark:text-white transition-colors duration-500">What more can you ask for?</h2>
+                    <p class="max-w-2xl text-lg font-light leading-relaxed text-slate-600 dark:text-white/60 transition-colors duration-500">It's not just a paper-making app. Manage your students, create batches, and share resources effortlessly.</p>
+                </div>
+
+                <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
+                    
+                    <div class="md:col-span-2 flex">
+                        <div class="w-full rounded-2xl bg-white border border-slate-200 transition-all duration-300 hover:border-[#4780ff]/40 hover:shadow-md dark:bg-[#1e293b] dark:border-slate-700 dark:hover:border-[#4780ff]/50">
+                            <div class="p-8 flex h-full flex-col md:flex-row md:items-center gap-6">
+                                <div class="shrink-0 size-14 rounded-xl flex items-center justify-center bg-slate-50 border border-slate-100 text-[#4780ff] dark:bg-slate-900 dark:border-slate-700">
+                                    <svg class="size-6 pointer-events-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                                </div>
+                                <div class="flex flex-col">
+                                    <h3 class="text-xl font-medium mb-2 tracking-tight text-slate-900 dark:text-white">Pick from 10 Lakh+ Questions</h3>
+                                    <p class="leading-relaxed text-sm font-light text-slate-600 dark:text-white/60">Zero typing or tech knowledge required. Just chose the questions you want.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="md:col-span-1 flex">
+                        <div class="w-full rounded-2xl bg-white border border-slate-200 transition-all duration-300 hover:border-[#4780ff]/40 hover:shadow-md dark:bg-[#1e293b] dark:border-slate-700 dark:hover:border-[#4780ff]/50">
+                            <div class="p-8 flex h-full flex-col gap-5">
+                                <div class="shrink-0 size-14 rounded-xl flex items-center justify-center bg-slate-50 border border-slate-100 text-[#4780ff] dark:bg-slate-900 dark:border-slate-700">
+                                    <svg class="size-6 pointer-events-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
+                                </div>
+                                <div class="flex flex-col">
+                                    <h3 class="text-xl font-medium mb-2 tracking-tight text-slate-900 dark:text-white">Compatible on All Devices</h3>
+                                    <p class="leading-relaxed text-sm font-light text-slate-600 dark:text-white/60">Works perfectly on all devices, including desktops, tablets, and smartphones.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="md:col-span-1 flex">
+                        <div class="w-full rounded-2xl bg-white border border-slate-200 transition-all duration-300 hover:border-[#4780ff]/40 hover:shadow-md dark:bg-[#1e293b] dark:border-slate-700 dark:hover:border-[#4780ff]/50">
+                            <div class="p-8 flex h-full flex-col gap-5">
+                                <div class="shrink-0 size-14 rounded-xl flex items-center justify-center bg-slate-50 border border-slate-100 text-[#4780ff] dark:bg-slate-900 dark:border-slate-700">
+                                    <svg class="size-6 pointer-events-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
+                                </div>
+                                <div class="flex flex-col">
+                                    <h3 class="text-xl font-medium mb-2 tracking-tight text-slate-900 dark:text-white">Get your Personal Mobile App</h3>
+                                    <p class="leading-relaxed text-sm font-light text-slate-600 dark:text-white/60">Your name, your logo where students can attempt tests and access study resources.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="md:col-span-2 flex">
+                        <div class="w-full rounded-2xl bg-white border border-slate-200 transition-all duration-300 hover:border-[#4780ff]/40 hover:shadow-md dark:bg-[#1e293b] dark:border-slate-700 dark:hover:border-[#4780ff]/50">
+                            <div class="p-8 flex h-full flex-col md:flex-row md:items-center gap-6">
+                                <div class="shrink-0 size-14 rounded-xl flex items-center justify-center bg-slate-50 border border-slate-100 text-[#4780ff] dark:bg-slate-900 dark:border-slate-700">
+                                    <svg class="size-6 pointer-events-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.596-2.673a.5.5 0 0 0-.585 0L8.498 21.886a.5.5 0 0 1-.81-.47l1.515-8.526"/><circle cx="12" cy="8" r="6"/></svg>
+                                </div>
+                                <div class="flex flex-col">
+                                    <h3 class="text-xl font-medium mb-2 tracking-tight text-slate-900 dark:text-white">Instant Result with Leaderboard</h3>
+                                    <p class="leading-relaxed text-sm font-light text-slate-600 dark:text-white/60">Examin8 displays the result instantly as the test ends. Along with a student leaderboard.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="md:col-span-2 flex">
+                        <div class="w-full rounded-2xl bg-white border border-slate-200 transition-all duration-300 hover:border-[#4780ff]/40 hover:shadow-md dark:bg-[#1e293b] dark:border-slate-700 dark:hover:border-[#4780ff]/50">
+                            <div class="p-8 flex h-full flex-col md:flex-row md:items-center gap-6">
+                                <div class="shrink-0 size-14 rounded-xl flex items-center justify-center bg-slate-50 border border-slate-100 text-[#4780ff] dark:bg-slate-900 dark:border-slate-700">
+                                    <svg class="size-6 pointer-events-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg>
+                                </div>
+                                <div class="flex flex-col">
+                                    <h3 class="text-xl font-medium mb-2 tracking-tight text-slate-900 dark:text-white">Share Study Material</h3>
+                                    <p class="leading-relaxed text-sm font-light text-slate-600 dark:text-white/60">Create batches and upload your PDF notes, papers or videos with your students easily.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="md:col-span-1 flex">
+                        <div class="w-full rounded-2xl bg-white border border-slate-200 transition-all duration-300 hover:border-[#4780ff]/40 hover:shadow-md dark:bg-[#1e293b] dark:border-slate-700 dark:hover:border-[#4780ff]/50">
+                            <div class="p-8 flex h-full flex-col gap-5">
+                                <div class="shrink-0 size-14 rounded-xl flex items-center justify-center bg-slate-50 border border-slate-100 text-[#4780ff] dark:bg-slate-900 dark:border-slate-700">
+                                    <svg class="size-6 pointer-events-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect width="18" height="18" x="3" y="3" rx="2" ry="2"/>
+                                        <path d="M3 9h18"/>
+                                        <path d="M9 21V9"/>
+                                    </svg>
+                                </div>
+                                <div class="flex flex-col">
+                                    <h3 class="text-xl font-medium mb-2 tracking-tight text-slate-900 dark:text-white">Prefilled Blueprint</h3>
+                                    <p class="leading-relaxed text-sm font-light text-slate-600 dark:text-white/60">You can directly use our blueprints to create full length exams for senior classes.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing" class="pricing-section relative w-full py-16 md:py-24 border-t overflow-hidden font-sans transition-colors duration-500 bg-[#f5f7fb] border-slate-200 dark:bg-[#0b1120] dark:border-slate-800">
+          <div class="px-6 md:px-12 mx-auto max-w-7xl relative z-10">
+            
+            <div class="flex flex-col items-center justify-center space-y-3 text-center mb-16">
+              <span class="mb-2 inline-flex items-center rounded-full px-4 py-1.5 text-xs font-medium tracking-wide border border-slate-200 bg-white text-slate-700 shadow-sm dark:border-slate-700 dark:bg-[#1e293b] dark:text-white/80 transition-colors duration-500">
+                Pricing
+              </span>
+              <h2 class="text-3xl md:text-5xl font-semibold tracking-tighter text-slate-900 dark:text-white transition-colors duration-500">
+                Affordable Plans for Everyone
+              </h2>
+              <p class="max-w-[600px] text-lg font-light leading-relaxed text-slate-600 dark:text-white/60 transition-colors duration-500">
+                Transparent pricing designed to scale with your institute.
+              </p>
+            </div>
+
+            <div class="grid gap-8 lg:grid-cols-3 items-start">
+              
+              <div class="h-full">
+                <div id="custom-card" class="pricing-card custom-card relative overflow-hidden h-full rounded-2xl border bg-white border-slate-200 shadow-sm transition-all dark:bg-[#1e293b] dark:border-slate-700">
+                  <div class="p-8 flex flex-col h-full">
+
+                    <div class="flex justify-between items-start mb-6 min-h-8">
+                      <h3 id="custom-tier-name" class="text-2xl font-medium tracking-tight text-slate-900 dark:text-white transition-colors duration-500">Basic</h3>
+                      <span id="custom-tier-badge" class="px-4 py-1 border text-xs font-bold uppercase tracking-widest rounded-full transition-all duration-500 bg-slate-100 text-slate-600 border-slate-200 dark:bg-slate-800 dark:text-slate-400 dark:border-slate-600">
+                        Custom
+                      </span>
+                    </div>
+
+                    <div class="flex items-baseline mb-8">
+                      <span id="custom-price" class="text-4xl font-semibold tracking-tighter text-slate-900 dark:text-white transition-colors duration-500">₹1,750</span>
+                      <span class="ml-2 text-sm font-light text-slate-500 dark:text-slate-400 transition-colors duration-500">/year</span>
+                    </div>
+
+                    <div id="custom-slider-box" class="flex flex-col gap-2 p-5 rounded-xl border mb-8 text-xs bg-slate-50 border-slate-100 dark:bg-slate-900/50 dark:border-slate-700 transition-colors duration-500">
+                      <div id="custom-slider-label" class="flex items-center gap-1.5 font-bold uppercase tracking-widest text-[10px] mb-1 text-slate-500 dark:text-slate-400 transition-colors duration-500">
+                        <svg class="pointer-events-none" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="21" y1="4" x2="14" y2="4"></line><line x1="10" y1="4" x2="3" y2="4"></line><line x1="21" y1="12" x2="12" y2="12"></line><line x1="8" y1="12" x2="3" y2="12"></line><line x1="21" y1="20" x2="16" y2="20"></line><line x1="12" y1="20" x2="3" y2="20"></line><line x1="14" y1="2" x2="14" y2="6"></line><line x1="8" y1="10" x2="8" y2="14"></line><line x1="16" y1="18" x2="16" y2="22"></line></svg>
+                        <span>Slide to customize</span>
+                      </div>
+                      <div class="space-y-1">
+                        <div class="flex justify-between font-medium text-sm text-slate-900 dark:text-white transition-colors">
+                          <span id="custom-papers-label">50 Papers</span>
+                        </div>
+                        <div class="py-2">
+                          <input type="range" id="papers-slider" min="0" max="5" step="1" value="1" class="custom-range-slider w-full h-2 rounded-full appearance-none cursor-pointer bg-slate-200 dark:bg-slate-700 transition-colors duration-500" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <ul id="custom-features" class="space-y-4 mb-10 flex-grow"></ul>
+
+                    <button type="button" id="custom-cta" class="w-full h-12 rounded-xl font-medium transition-all duration-300 bg-[#4780ff] text-white hover:bg-[#4780ff]/90">
+                      Get Started
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="h-full relative z-10 lg:-mt-4 lg:mb-[-1rem]">
+                <div class="relative overflow-hidden h-full rounded-2xl border-2 bg-white border-[#4780ff] shadow-xl dark:bg-[#1e293b]">
+                  <div class="p-8 flex flex-col h-full">
+                    
+                    <div class="flex justify-between items-start mb-6 min-h-8">
+                      <h3 class="text-2xl font-medium tracking-tight text-slate-900 dark:text-white transition-colors duration-500">Plus</h3>
+                      <span class="px-4 py-1 border text-xs font-bold uppercase tracking-widest rounded-full transition-colors duration-500 bg-[#4780ff]/10 text-[#4780ff] border-[#4780ff]/20">
+                        Most Popular
+                      </span>
+                    </div>
+
+                    <div class="flex items-baseline mb-8">
+                      <span class="text-4xl font-semibold tracking-tighter text-slate-900 dark:text-white transition-colors duration-500">₹1600</span>
+                      <span class="ml-2 text-sm font-light text-slate-500 dark:text-slate-400 transition-colors duration-500">/year</span>
+                    </div>
+
+                    <ul class="space-y-4 mb-10 flex-grow">
+                      <li class="flex items-center text-sm font-light text-slate-600 dark:text-white/70 transition-colors">
+                        <span class="flex items-center justify-center size-5 rounded-full mr-3 shrink-0 bg-[#4780ff]/10 text-[#4780ff]">
+                          <svg class="size-3 pointer-events-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        </span>
+                        100 Papers
+                      </li>
+                      <li class="flex items-center text-sm font-light text-slate-600 dark:text-white/70 transition-colors">
+                        <span class="flex items-center justify-center size-5 rounded-full mr-3 shrink-0 bg-[#4780ff]/10 text-[#4780ff]">
+                          <svg class="size-3 pointer-events-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        </span>
+                        1000 Online Attempts
+                      </li>
+                      <li class="flex items-center text-sm font-light text-slate-600 dark:text-white/70 transition-colors">
+                        <span class="flex items-center justify-center size-5 rounded-full mr-3 shrink-0 bg-[#4780ff]/10 text-[#4780ff]">
+                          <svg class="size-3 pointer-events-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        </span>
+                        12 Month Validity
+                      </li>
+                      <li class="flex items-center text-sm font-light text-slate-600 dark:text-white/70 transition-colors">
+                        <span class="flex items-center justify-center size-5 rounded-full mr-3 shrink-0 bg-[#4780ff]/10 text-[#4780ff]">
+                          <svg class="size-3 pointer-events-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        </span>
+                        10 Free Subject Resources
+                      </li>
+                    </ul>
+
+                    <button type="button" class="pricing-cta-standard w-full h-12 rounded-xl font-bold transition-all duration-300 bg-[#4780ff] text-white hover:bg-[#4780ff]/90 shadow-lg border-none">
+                      Get Started Now
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="h-full">
+                <div class="relative overflow-hidden h-full rounded-2xl border bg-white border-slate-200 shadow-sm transition-all dark:bg-[#1e293b] dark:border-slate-700">
+                  <div class="p-8 flex flex-col h-full">
+
+                    <div class="flex justify-between items-start mb-6 min-h-8">
+                      <h3 class="text-2xl font-medium tracking-tight text-slate-900 dark:text-white transition-colors duration-500">Pro</h3>
+                    </div>
+
+                    <div class="flex items-baseline mb-8">
+                      <span class="text-4xl font-semibold tracking-tighter text-slate-900 dark:text-white transition-colors duration-500">₹3500</span>
+                      <span class="ml-2 text-sm font-light text-slate-500 dark:text-slate-400 transition-colors duration-500">/year</span>
+                    </div>
+
+                    <ul class="space-y-4 mb-10 flex-grow">
+                      <li class="flex items-center text-sm font-light text-slate-600 dark:text-white/70 transition-colors">
+                        <span class="flex items-center justify-center size-5 rounded-full mr-3 shrink-0 bg-slate-100 text-slate-500 dark:bg-slate-800 dark:text-slate-400">
+                          <svg class="size-3 pointer-events-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        </span>
+                        250 Papers
+                      </li>
+                      <li class="flex items-center text-sm font-light text-slate-600 dark:text-white/70 transition-colors">
+                        <span class="flex items-center justify-center size-5 rounded-full mr-3 shrink-0 bg-slate-100 text-slate-500 dark:bg-slate-800 dark:text-slate-400">
+                          <svg class="size-3 pointer-events-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        </span>
+                        2500 Online Attempts
+                      </li>
+                      <li class="flex items-center text-sm font-light text-slate-600 dark:text-white/70 transition-colors">
+                        <span class="flex items-center justify-center size-5 rounded-full mr-3 shrink-0 bg-slate-100 text-slate-500 dark:bg-slate-800 dark:text-slate-400">
+                          <svg class="size-3 pointer-events-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        </span>
+                        12 Month Validity
+                      </li>
+                      <li class="flex items-center text-sm font-light text-slate-600 dark:text-white/70 transition-colors">
+                        <span class="flex items-center justify-center size-5 rounded-full mr-3 shrink-0 bg-slate-100 text-slate-500 dark:bg-slate-800 dark:text-slate-400">
+                          <svg class="size-3 pointer-events-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        </span>
+                        25 Free Subject Resources
+                      </li>
+                    </ul>
+
+                    <button type="button" class="pricing-cta-standard w-full h-12 rounded-xl font-medium transition-all duration-300 bg-white border border-slate-200 text-slate-900 hover:bg-slate-50 dark:bg-slate-800 dark:border-slate-600 dark:text-white dark:hover:bg-slate-700">
+                      Get Started
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+<div class="mt-16 w-full">
+    <div class="flex flex-col items-center justify-center space-y-3 text-center mb-10">
+        <h3 class="text-xl md:text-2xl font-semibold tracking-tight text-slate-900 dark:text-white">
+            Understanding Your Plan
+        </h3>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-4">
+        <div class="h-full rounded-2xl border px-6 transition-colors duration-500 border-slate-200 bg-white dark:border-slate-700 dark:bg-[#1e293b]">
+            <button type="button" class="plan-trigger w-full text-left py-5 flex justify-between items-center font-medium text-sm md:text-base text-slate-900 dark:text-white/90 hover:text-[#4780ff] focus:outline-none">
+                <span class="pr-4">What does 50 Papers mean?</span>
+                <span class="plan-icon text-xl font-light opacity-50 shrink-0 transition-transform duration-300 pointer-events-none">+</span>
+            </button>
+            <div class="plan-content grid grid-rows-[0fr] transition-all duration-300 ease-in-out">
+                <div class="overflow-hidden">
+                    <div class="pb-5 text-sm font-light text-slate-600 dark:text-white/60">
+                        You will be able to create 50 tests in total, including both online and offline tests. As you reach Step 3 while creating your test, that will be counted as a used paper.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="h-full rounded-2xl border px-6 transition-colors duration-500 border-slate-200 bg-white dark:border-slate-700 dark:bg-[#1e293b]">
+            <button type="button" class="plan-trigger w-full text-left py-5 flex justify-between items-center font-medium text-sm md:text-base text-slate-900 dark:text-white/90 hover:text-[#4780ff] focus:outline-none">
+                <span class="pr-4">How are 500 Online Attempts counted?</span>
+                <span class="plan-icon text-xl font-light opacity-50 shrink-0 transition-transform duration-300 pointer-events-none">+</span>
+            </button>
+            <div class="plan-content grid grid-rows-[0fr] transition-all duration-300 ease-in-out">
+                <div class="overflow-hidden">
+                    <div class="pb-5 text-sm font-light text-slate-600 dark:text-white/60">
+                        Every student attempting the online test counts as 1 online attempt. If 20 students take your online test, your balance reduces by 20.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="h-full rounded-2xl border px-6 transition-colors duration-500 border-slate-200 bg-white dark:border-slate-700 dark:bg-[#1e293b]">
+            <button type="button" class="plan-trigger w-full text-left py-5 flex justify-between items-center font-medium text-sm md:text-base text-slate-900 dark:text-white/90 hover:text-[#4780ff] focus:outline-none">
+                <span class="pr-4">How do 5 Free Subject Resources work?</span>
+                <span class="plan-icon text-xl font-light opacity-50 shrink-0 transition-transform duration-300 pointer-events-none">+</span>
+            </button>
+            <div class="plan-content grid grid-rows-[0fr] transition-all duration-300 ease-in-out">
+                <div class="overflow-hidden">
+                    <div class="pb-5 text-sm font-light text-slate-600 dark:text-white/60">
+                        You can assign subject resources such as Revision Notes, NCERT Solutions, Important Questions, PYQ Bank, Online Tests, and Practice Questions to your students through the Examin8 Admin Portal.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="h-full rounded-2xl border px-6 transition-colors duration-500 border-slate-200 bg-white dark:border-slate-700 dark:bg-[#1e293b]">
+            <button type="button" class="plan-trigger w-full text-left py-5 flex justify-between items-center font-medium text-sm md:text-base text-slate-900 dark:text-white/90 hover:text-[#4780ff] focus:outline-none">
+                <span class="pr-4">What happens if I run out? (Top Ups)</span>
+                <span class="plan-icon text-xl font-light opacity-50 shrink-0 transition-transform duration-300 pointer-events-none">+</span>
+            </button>
+            <div class="plan-content grid grid-rows-[0fr] transition-all duration-300 ease-in-out">
+                <div class="overflow-hidden">
+                    <div class="pb-5 text-sm font-light text-slate-600 dark:text-white/60">
+                        If you run out of attempts or resources, you can purchase individual top-ups at any time without needing to upgrade to an entirely new plan.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.querySelectorAll('.plan-trigger').forEach(trigger => {
+        trigger.addEventListener('click', () => {
+            const content = trigger.nextElementSibling;
+            const icon = trigger.querySelector('.plan-icon');
+            
+            // Check if open by looking at the gridTemplateRows style
+            const isOpen = content.style.gridTemplateRows === '1fr';
+            
+            if (isOpen) {
+                content.style.gridTemplateRows = '0fr';
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                content.style.gridTemplateRows = '1fr';
+                icon.style.transform = 'rotate(45deg)';
+            }
+        });
+    });
+</script>
+
+          <style>
+            /* Reset slider default styles */
+            .custom-range-slider::-webkit-slider-thumb { appearance: none; width: 20px; height: 20px; border-radius: 50%; background-color: #ffffff; border: 4px solid #4780ff; box-shadow: 0 0 10px rgba(71,128,255,0.5); transition: all 0.3s; cursor: pointer; }
+            .custom-range-slider::-moz-range-thumb { width: 20px; height: 20px; border-radius: 50%; background-color: #ffffff; border: 4px solid #4780ff; cursor: pointer; }
+            #papers-slider { -webkit-appearance: none; appearance: none; }
+          </style>
+
+          <script>
+            (function () {
+              var allowedPapers = [30, 50, 100, 250, 500, 1000];
+              var slider = document.getElementById('papers-slider');
+              var tierNameEl = document.getElementById('custom-tier-name');
+              var priceEl = document.getElementById('custom-price');
+              var papersLabelEl = document.getElementById('custom-papers-label');
+              var featuresEl = document.getElementById('custom-features');
+
+              function getTierName(papers) {
+                if (papers === 30) return "Mini";
+                if (papers === 50) return "Basic";
+                if (papers === 100) return "Plus";
+                if (papers === 250) return "Pro";
+                if (papers === 500) return "Super";
+                if (papers === 1000) return "Super Plus";
+                return "Custom";
+              }
+
+              function getPaperRate(papers) {
+                if (papers < 50) return 20;
+                if (papers < 100) return 13;
+                if (papers < 250) return 11;
+                if (papers < 500) return 9;
+                if (papers < 750) return 7;
+                if (papers < 900) return 6;
+                return 5;
+              }
+
+              function updateCustomCard() {
+                if(!slider) return;
+                var idx = Number(slider.value);
+                var papers = allowedPapers[idx];
+                var attempts = papers * 10;
+                var rate = getPaperRate(papers);
+                var paperCost = papers * rate;
+                var attemptCost = attempts * 0.5;
+                var price = Math.ceil(paperCost + attemptCost);
+                var subjects = Math.ceil(papers / 10);
+
+                tierNameEl.textContent = getTierName(papers);
+                priceEl.textContent = '₹' + price.toLocaleString();
+                papersLabelEl.textContent = papers.toLocaleString() + ' Papers';
+
+                var features = [
+                  papers.toLocaleString() + ' Papers',
+                  attempts.toLocaleString() + ' Online Attempts',
+                  '12 Month Validity',
+                  subjects + ' Free Subject Resources'
+                ];
+
+                featuresEl.innerHTML = features.map(function (f) {
+                  return (
+                    '<li class="flex items-center text-sm font-light text-slate-600 dark:text-white/70 transition-colors">' +
+                      '<span class="flex items-center justify-center size-5 rounded-full mr-3 shrink-0 bg-[#4780ff]/10 text-[#4780ff]">' +
+                        '<svg class="size-3 pointer-events-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>' +
+                      '</span>' + f + 
+                    '</li>'
+                  );
+                }).join('');
+              }
+
+              if (slider) {
+                slider.addEventListener('input', updateCustomCard);
+                updateCustomCard();
+              }
+
+              function handleRedirect() { window.open("https://app.examin8.com/purchase-subscription", "_blank", "noopener,noreferrer"); }
+              document.querySelectorAll('.pricing-cta-standard, #custom-cta').forEach(function (btn) { btn.addEventListener('click', handleRedirect); });
+
+              // Grid-Based Accordion Logic
+              document.querySelectorAll('.accordion-btn').forEach(btn => {
+                  btn.addEventListener('click', () => {
+                      const content = btn.nextElementSibling;
+                      const icon = btn.querySelector('.accordion-icon');
+                      const isOpen = content.style.gridTemplateRows === '1fr';
+                      
+                      document.querySelectorAll('.accordion-content').forEach(el => { el.style.gridTemplateRows = '0fr'; });
+                      document.querySelectorAll('.accordion-icon').forEach(i => { i.style.transform = 'rotate(0deg)'; });
+
+                      if (!isOpen) {
+                          content.style.gridTemplateRows = '1fr';
+                          icon.style.transform = 'rotate(180deg)';
+                      }
+                  });
+              });
+            })();
+          </script>
+        </section>
+
+       <section id="personal-app" class="relative w-full min-h-screen flex items-center justify-center bg-[#050505] overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(212,175,55,0.15),transparent_50%)]"></div>
+
+    <div class="max-w-7xl mx-auto px-6 md:px-12 w-full grid lg:grid-cols-[1fr_auto] gap-24 items-center relative z-10 py-24">
+        
+        <div class="space-y-8">
+            <div class="space-y-4">
+                <span class="inline-flex items-center gap-2 rounded-full px-4 py-1.5 font-medium tracking-wider text-[11px] uppercase bg-[#d4af37]/10 text-[#d4af37] border border-[#d4af37]/30">
+                    Exclusive Beta Access
+                </span>
+                <h3 class="text-5xl md:text-6xl font-light tracking-tight text-white leading-tight">
+                    Elevate Your Institute <br />
+                    <span class="font-medium bg-gradient-to-r from-[#d4af37] to-[#f3e5ab] bg-clip-text text-transparent">Get Your Own App.</span>
+                </h3>
+            </div>
+
+            <div class="relative p-8 rounded-2xl bg-[#0a0a0a] border border-[#d4af37]/20">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+                    <div>
+                        <p class="text-[11px] uppercase tracking-widest text-white/50 font-medium mb-1">Yearly App License</p>
+                        <div class="flex items-center gap-3">
+                            <span class="text-2xl font-medium text-white/40 line-through decoration-white/30">₹8,000</span>
+                            <span class="text-5xl font-light text-white tracking-tighter">₹3,000</span>
+                        </div>
+                    </div>
+                    <div class="px-4 py-2 rounded-lg bg-[#d4af37]/5 border border-[#d4af37]/20 text-[10px] text-[#d4af37]/90 uppercase tracking-widest font-medium">
+                        Beta Price for 1000 Users
+                    </div>
+                </div>
+                <div class="mt-6 pt-6 border-t border-white/10 flex items-center justify-between">
+                    <p class="text-[11px] text-white/50 font-medium tracking-wide uppercase">Premium Content Access</p>
+                    <p class="text-lg text-white/90 font-medium">₹50 <span class="text-xs text-[#d4af37]/70 uppercase">/student/subject</span></p>
+                </div>
+            </div>
+
+            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <li class="flex items-start text-sm text-white/70 font-light leading-relaxed">
+                    <span class="mt-1 mr-3 text-[#d4af37]">✓</span> Look professional and stand out with your own app.
+                </li>
+                <li class="flex items-start text-sm text-white/70 font-light leading-relaxed">
+                    <span class="mt-1 mr-3 text-[#d4af37]">✓</span> All your students get their dashboard & report.
+                </li>
+                <li class="flex items-start text-sm text-white/70 font-light leading-relaxed">
+                    <span class="mt-1 mr-3 text-[#d4af37]">✓</span> Share tests, resources, manage batches and more!
+                </li>
+                <li class="flex items-start text-sm text-white/70 font-light leading-relaxed">
+                    <span class="mt-1 mr-3 text-[#d4af37]">✓</span> Conduct online test and get results with leaderboard.
+                </li>
+                <li class="flex items-start text-sm text-white/70 font-light leading-relaxed">
+                    <span class="mt-1 mr-3 text-[#d4af37]">✓</span> Manage fees and attendance of your students seamlessly.
+                </li>
+                <li class="flex items-start text-sm text-white/70 font-light leading-relaxed">
+                    <span class="mt-1 mr-3 text-[#d4af37]">✓</span> Any other needs? Let's discuss and we will build it for you!
+                </li>
+            </ul>
+
+            <div class="pt-4">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScoFt9xm62FfXt1NK50KYshjsMVcerfOOgb5ez2oKa5ZgyKpw/viewform?usp=send_form" target="_blank" class="inline-flex items-center justify-center h-16 px-12 rounded-full bg-[#d4af37] text-black hover:bg-[#e5c05e] font-semibold text-sm tracking-[0.2em] uppercase transition-all duration-300 w-full sm:w-max shadow-lg hover:shadow-[#d4af37]/20">
+                    Join Waitlist
+                </a>
+            </div>
+        </div>
+
+        <div class="hidden lg:flex relative w-[500px] h-[500px] items-center justify-center">
+            <div class="absolute left-0 rotate-[-10deg] w-[200px] aspect-[1/2] rounded-[2rem] border-[6px] border-[#1a1a1a] bg-black overflow-hidden shadow-2xl opacity-60">
+                <img src="images/app_mockup_1.jpeg" alt="App interface" class="w-full h-full object-cover object-top" onerror="this.style.display='none'" />
+            </div>
+            <div class="absolute right-0 rotate-[10deg] w-[200px] aspect-[1/2] rounded-[2rem] border-[6px] border-[#1a1a1a] bg-black overflow-hidden shadow-2xl opacity-60">
+                <img src="images/app_mockup_3.jpeg" alt="App interface" class="w-full h-full object-cover object-top" onerror="this.style.display='none'" />
+            </div>
+            <div class="absolute w-[220px] aspect-[1/2] rounded-[2.5rem] border-[6px] border-[#d4af37]/40 bg-black overflow-hidden shadow-2xl z-20">
+                <div class="absolute top-3 left-1/2 -translate-x-1/2 w-1/3 h-4 rounded-full bg-[#1a1a1a] z-30"></div>
+                <img src="images/app_mockup_2.jpeg" alt="App interface" class="w-full h-full object-cover object-top" onerror="this.style.display='none'" />
+            </div>
+        </div>
+    </div>
+</section>
+
+        <section id="faq" class="relative w-full py-16 md:py-24 border-t border-slate-200 dark:border-slate-800 overflow-hidden bg-[#f5f7fb] dark:bg-[#0f172a]">
+            <div class="px-6 md:px-12 relative z-10 max-w-6xl mx-auto">
+                <div class="flex flex-col items-center justify-center space-y-3 text-center mb-12">
+                    <span class="inline-flex items-center rounded-full px-4 py-1.5 text-xs font-medium tracking-wide border border-slate-200 bg-slate-50 text-slate-700 dark:border-slate-700 dark:bg-[#1e293b] dark:text-white/80">FAQ</span>
+                    <h2 class="text-3xl md:text-5xl font-semibold tracking-tighter text-slate-900 dark:text-white">Frequently Asked Questions</h2>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-4" id="faq-container"></div>
+            </div>
+        </section>
+
+        <script>
+            const faqs = [
+                { q: "How many papers can I create using NCERT questions?", a: "Unlimited papers. You can create unlimited papers for free using NCERT textbook questions." },
+                { q: "What will happen to my unused papers?", a: "We don't carry forward remaining papers and attempts. So, these will expire as soon as your package expires." },
+                { q: "What if my paper count becomes zero before package expiry date?", a: "You will have to buy a new package. The new package valid will be for one year from the date of purchasing the new package." },
+                { q: "What if the papers remain but online test attempts are exhausted?", a: "You can top-up online test attempts anytime." },
+                { q: "How do you count my papers?", a: "As soon as your paper reaches step 3, we count it as one paper." },
+                { q: "What are online test attempts?", a: "Whenever you create an online test and share the same with your students, we count how many students have successfully submitted it." },
+                { q: "Can we download the question paper as a Word file?", a: "Yes, you can download the question paper as a PDF as well as a Word file." },
+                { q: "What is Free Mobile App?", a: "We provide Examin8 App for free with the test generator package." }
+            ];
+
+            const container = document.getElementById('faq-container');
+            
+            faqs.forEach((faq) => {
+                const div = document.createElement('div');
+                div.className = "h-full";
+                 div.innerHTML = `
+                    <div class="faq-item h-full rounded-2xl border px-6 transition-colors duration-500 border-slate-200 bg-white dark:border-slate-700 dark:bg-[#1e293b]">
+                        <button type="button" class="touch-manipulation faq-trigger w-full text-left py-5 flex justify-between items-center font-medium text-sm md:text-base transition-colors duration-300 text-slate-900 dark:text-white/90 hover:text-[#4780ff] dark:hover:text-[#4780ff] focus:outline-none">
+                            <span class="pr-4">${faq.q}</span>
+                            <span class="faq-icon text-xl font-light opacity-50 shrink-0 transition-transform duration-300 transform origin-center pointer-events-none">+</span>
+                        </button>
+                        <div class="faq-content grid grid-rows-[0fr] transition-all duration-300 ease-in-out">
+                            <div class="overflow-hidden">
+                                <div class="pb-5 text-sm font-light text-slate-600 dark:text-white/60 transition-colors duration-500">
+                                    ${faq.a}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(div);
+            });
+
+            document.querySelectorAll('.faq-trigger').forEach(trigger => {
+                trigger.addEventListener('click', () => {
+                    const content = trigger.nextElementSibling;
+                    const icon = trigger.querySelector('.faq-icon');
+                    const isOpen = content.style.gridTemplateRows === '1fr';
+                    
+                    if (isOpen) {
+                        content.style.gridTemplateRows = '0fr';
+                        icon.style.transform = 'rotate(0deg)';
+                    } else {
+                        content.style.gridTemplateRows = '1fr';
+                        icon.style.transform = 'rotate(45deg)';
+                     }
+                });
+            });
+        </script>
+
+        <section class="relative w-full py-16 md:py-24 border-t border-slate-200 dark:border-slate-800 bg-[#f5f7fb] dark:bg-[#0b1120]">
+            <div class="px-6 md:px-12 relative z-10 max-w-7xl mx-auto">
+                <div class="flex flex-col items-center justify-center space-y-6 text-center">
+                    <h2 class="text-3xl md:text-5xl lg:text-6xl font-semibold tracking-tighter leading-tight max-w-4xl text-slate-900 dark:text-white">
+                        Trusted by 
+                         <span class="relative inline-block whitespace-nowrap px-1">
+                            <span class="relative z-10">12,000+ Institutes</span>
+                            <svg class="absolute -bottom-1 left-0 w-full h-2 text-[#4780ff] pointer-events-none opacity-50" viewBox="0 0 100 10" preserveAspectRatio="none"><path d="M 2 8 Q 50 2 98 8" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg>
+                        </span>
+                         & 
+                         <span class="relative inline-block whitespace-nowrap px-1">
+                            <span class="relative z-10">1,00,000+ Teachers</span>
+                            <svg class="absolute -bottom-1 left-0 w-full h-2 text-[#4780ff] pointer-events-none opacity-50" viewBox="0 0 100 10" preserveAspectRatio="none"><path d="M 2 8 Q 50 2 98 8" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg>
+                        </span>
+                    </h2>
+                    
+                    <p class="max-w-[700px] text-base md:text-lg font-light leading-relaxed text-slate-600 dark:text-white/60">
+                        Join thousands of satisfied educators who are saving hours every week and boosting their productivity by leveraging Examin8.
+                    </p>
+                    
+                     <div class="flex flex-col sm:flex-row gap-4 pt-6 w-full sm:w-auto">
+                        <a href="https://app.examin8.com/home" target="_blank" class="flex items-center justify-center gap-2 h-14 px-10 rounded-xl text-base font-medium bg-[#4780ff] hover:bg-[#4780ff]/90 text-white transition-all duration-300 shadow-lg hover:shadow-xl group">
+                            Get Started
+                            <svg class="group-hover:translate-x-1 transition-transform ease-in-out duration-300 size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                        </a>
+                        
+                        <a href="https://play.google.com/store/apps/details?id=com.examin8.exam" target="_blank" class="flex items-center justify-center gap-2 h-14 px-10 rounded-xl text-base font-medium transition-all duration-300 bg-white border border-slate-300 text-slate-900 hover:bg-slate-50 shadow-sm dark:bg-[#1e293b] dark:border-slate-700 dark:text-white dark:hover:bg-slate-800">
+                            Install App
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="w-full pt-16 pb-10 border-t bg-[#f5f7fb] border-slate-200 dark:bg-[#0f172a] dark:border-slate-800 transition-colors duration-500 ease-in-out">
+            <div class="max-w-7xl mx-auto px-6 md:px-12 flex flex-col gap-12 relative">
+                
+                <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                    <div class="flex items-center gap-6">
+                        <div class="flex items-center gap-3 font-semibold text-lg text-slate-900 dark:text-white transition-colors duration-500">
+                            <img src="images/examin8_logo.png" alt="Examin8 Logo" class="w-7 h-7 object-contain" />
+                            Examin8
+                        </div>
+                        
+                        <a href="https://play.google.com/store/apps/details?id=com.examin8.exam" target="_blank" class="flex items-center gap-2 px-4 py-1.5 rounded-lg border transition-all text-xs font-medium bg-slate-50 border-slate-200 text-slate-600 hover:text-slate-900 hover:border-slate-300 hover:bg-slate-100 dark:bg-[#1e293b] dark:border-slate-700 dark:text-white/80 dark:hover:text-white dark:hover:border-slate-600 dark:hover:bg-slate-800">
+                            <svg class="w-3.5 h-3.5 pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"/><path d="M12 12v9"/><path d="m8 17 4 4 4-4"/></svg>
+                            Download App
+                        </a>
+                    </div>
+
+                    <div class="flex items-center gap-6">
+                        <a href="tel:+91-8047225309" class="text-slate-400 hover:text-[#4780ff] dark:text-slate-500 dark:hover:text-[#4780ff] transition-colors">
+                            <svg class="w-5 h-5 pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        </a>
+                        <a href="https://api.whatsapp.com/send/?phone=919213522769" target="_blank" class="text-slate-400 hover:text-emerald-500 dark:text-slate-500 dark:hover:text-emerald-400 transition-colors">
+                            <svg class="w-5 h-5 pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22z"/><path d="m9 10 2 2-2 2"/><path d="m15 10-2 2 2 2"/></svg>
+                        </a>
+                        <a href="/cdn-cgi/l/email-protection#0d6e6c7f684d60746e6f7e686a78646968236e6260" class="text-slate-400 hover:text-[#4780ff] dark:text-slate-500 dark:hover:text-[#4780ff] transition-colors">
+                            <svg class="w-5 h-5 pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row justify-between items-center gap-6 pt-8 border-t border-slate-200 dark:border-slate-800">
+                    <div class="flex flex-wrap gap-6 text-[11px] uppercase tracking-widest font-medium text-slate-500 dark:text-slate-500 transition-colors duration-500">
+                        <span>&copy; <span id="year"></span> Examin8</span>
+                        <a href="https://elpistechsolutions.com/tos/" class="hover:text-slate-900 dark:hover:text-white transition-colors duration-300">Terms</a>
+                        <a href="https://elpistechsolutions.com/privacy-policy/" class="hover:text-slate-900 dark:hover:text-white transition-colors duration-300">Privacy</a>
+                    </div>
+
+                    <div class="text-[11px] flex items-center gap-2 text-slate-500 dark:text-slate-500 transition-colors duration-500">
+                        <svg class="w-3.5 h-3.5 text-[#4780ff] pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                        Noida, Uttar Pradesh
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+        <script>
+            document.getElementById('year').innerText = new Date().getFullYear();
+        </script>
+
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            
+            // --- 1. Theme Toggle Logic ---
+            const themeToggles = document.querySelectorAll('.theme-toggle');
+            const htmlElement = document.documentElement;
+
+            themeToggles.forEach(toggle => {
+                toggle.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    htmlElement.classList.toggle('dark');
+                });
+            });
+
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+                if (event.matches) {
+                    htmlElement.classList.add('dark');
+                } else {
+                    htmlElement.classList.remove('dark');
+                }
+            });
+
+            // --- 2. Mobile Menu Logic ---
+            const mobileBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const iconMenu = document.getElementById('icon-menu');
+            const iconClose = document.getElementById('icon-close');
+
+            function closeMobileMenu() {
+                mobileMenu.classList.remove('menu-visible');
+                mobileMenu.classList.add('menu-hidden');
+                iconMenu.classList.add('block');
+                iconMenu.classList.remove('hidden');
+                iconClose.classList.add('hidden');
+                iconClose.classList.remove('block');
+            }
+
+            mobileBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const isHidden = mobileMenu.classList.contains('menu-hidden');
+                
+                if (isHidden) {
+                    mobileMenu.classList.remove('menu-hidden');
+                    mobileMenu.classList.add('menu-visible');
+                    iconMenu.classList.add('hidden');
+                    iconMenu.classList.remove('block');
+                    iconClose.classList.add('block');
+                    iconClose.classList.remove('hidden');
+                } else {
+                    closeMobileMenu();
+                }
+            });
+
+            // Close mobile menu when clicking a link inside it
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', closeMobileMenu);
+            });
+        });
+    </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"591c5e6403724a71b9908aa867f0762d","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
